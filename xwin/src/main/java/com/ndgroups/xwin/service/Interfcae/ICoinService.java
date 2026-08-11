@@ -1,0 +1,17 @@
+package com.ndgroups.xwin.service.Interfcae;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.ndgroups.xwin.model.Coin;
+
+import java.util.List;
+
+public interface ICoinService {
+    List<Coin> getCoinList(int page) throws Exception;
+    String getMarketChat(String coinId, int days) throws Exception;
+    String getCoinDetails(String coinId) throws Exception;
+    Coin getCoinById(String coinId) throws Exception;
+    String searchCoin(String keyword) throws Exception;
+    String getTop50CoinByMarketTopRank() throws Exception;
+    String getTreadingCoins() throws Exception;
+
+}
