@@ -24,16 +24,28 @@ public class WatchlistService implements IWatchlistService {
 
     @Override
     public Watchlist createWatchlist(User user) {
-        return null;
+        Watchlist watchlist = new Watchlist();
+        watchlist.setUser(user);
+        return watchlistRepository.save(watchlist);
     }
 
     @Override
-    public Watchlist getById(Integer id) {
-        return null;
+    public Watchlist getById(Integer id) throws Exception {
+        return watchlistRepository.findById(id)
+                .orElseThrow(() -> new Exception("watchlist with Id not found"));
     }
 
     @Override
-    public Coin addItemToWatchlist(Coin coin, User user) {
-        return null;
+    public Coin addItemToWatchlist(Coin coin, User user) throws Exception {
+        Watchlist watchlist = getUserWatchlist(user.getId());
+        if (watchlist.getCoins().contains(coin)){
+            watchlist.getCoins().remove(coin);
+        }
+        watchlist.getCoins().add(coin);
+        watchlistRepository.save(watchlist);
+
+        return coin;
     }
+
+
 }
