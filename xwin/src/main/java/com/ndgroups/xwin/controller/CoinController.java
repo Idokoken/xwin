@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ndgroups.xwin.model.Coin;
 import com.ndgroups.xwin.response.ApiResponseDto;
 import com.ndgroups.xwin.service.Interfcae.ICoinService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ import java.util.List;
 public class CoinController {
     @Autowired
     private ICoinService coinService;
-    @Autowired
+
     private ObjectMapper objectMapper;
 
     @GetMapping
@@ -65,20 +66,20 @@ public class CoinController {
         }
     }
 
-    @GetMapping("/{coinId}")
-    public ResponseEntity<ApiResponseDto> getCoinById(@PathVariable String coinId){
-        try {
-            Coin coin = coinService.getCoinById(coinId);
-//            JsonNode jsonNode = objectMapper.readTree(coin);
-            return ResponseEntity.status(HttpStatus.OK)
-                    .body(new ApiResponseDto<>(true, HttpStatus.OK.value(), coin,
-                            "coin successfully fetched"));
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body(new ApiResponseDto<>(false, HttpStatus.NOT_FOUND.value(),
-                            null, e.getMessage()));
-        }
-    }
+//    @GetMapping("/{coinId}")
+//    public ResponseEntity<ApiResponseDto> getCoinById(@PathVariable String coinId){
+//        try {
+//            Coin coin = coinService.getCoinById(coinId);
+////            JsonNode jsonNode = objectMapper.readTree(coin);
+//            return ResponseEntity.status(HttpStatus.OK)
+//                    .body(new ApiResponseDto<>(true, HttpStatus.OK.value(), coin,
+//                            "coin successfully fetched"));
+//        } catch (Exception e) {
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+//                    .body(new ApiResponseDto<>(false, HttpStatus.NOT_FOUND.value(),
+//                            null, e.getMessage()));
+//        }
+//    }
 
     @GetMapping("/search")
     public ResponseEntity<ApiResponseDto> searchCoin(@RequestParam String keyword){

@@ -2,7 +2,9 @@ package com.ndgroups.xwin.controller;
 
 import com.ndgroups.xwin.model.*;
 import com.ndgroups.xwin.response.ApiResponseDto;
+import com.ndgroups.xwin.response.PaymentResponse;
 import com.ndgroups.xwin.service.Interfcae.IOrderService;
+import com.ndgroups.xwin.service.Interfcae.IPaymentOrderService;
 import com.ndgroups.xwin.service.Interfcae.IUserService;
 import com.ndgroups.xwin.service.Interfcae.IWalletService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,8 @@ public class WalletController {
     private IUserService userService;
     @Autowired
     private IOrderService orderService;
+    @Autowired
+    private IPaymentOrderService paymentOrderService;
 
     @GetMapping("/user")
     public ResponseEntity<ApiResponseDto> getUserWallet(@RequestHeader("Authorization") String jwt){
@@ -85,7 +89,7 @@ public class WalletController {
         }
     }
 
-    @PutMapping("/order/{orderid}/pay")
+    @PutMapping("/order/{orderId}/pay")
     public ResponseEntity<ApiResponseDto> payOrderPayment(@RequestHeader("Authorization") String jwt,
                                                           @PathVariable Integer orderId){
         try {
@@ -98,6 +102,31 @@ public class WalletController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(new ApiResponseDto<>(false, HttpStatus.NOT_FOUND.value(),
+                            null, e.getMessage()));
+        }
+    }
+
+
+    @PutMapping("/deposit")
+    public ResponseEntity<ApiResponseDto> addBalanceToWallet(@RequestHeader("Authorization") String jwt,
+                                                             @RequestParam(name = "order_id") Integer orderId,
+                                                             @RequestParam(name = "payment_id") String paymentId){
+        try {
+            User user = userService.findUserByJwtToken(jwt);
+            Wallet wallet = walletService.getUserWallet(user);
+
+            PaymentOrder order = paymentOrderService.getPaymentOrderById(orderId);
+            Boolean status = paymentOrderService.proceedPaymentOrder(order, paymentId);
+
+            if(status){
+                wallet = walletService.addBalance(wallet, order.getAmount());
+            }
+            return ResponseEntity.status(HttpStatus.OK)
+                    .body(new ApiResponseDto<>(true, HttpStatus.OK.value(), wallet,
+                            "fund successfully added to wallet"));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new ApiResponseDto<>(false, HttpStatus.INTERNAL_SERVER_ERROR.value(),
                             null, e.getMessage()));
         }
     }
