@@ -27,13 +27,13 @@ function Navbar() {
       <div className="flex items-center gap-3">
         <Sheet>
           <SheetTrigger>
-            <Button
+            {/* <Button
               variant="ghost"
               size="icon"
               className="rounded-full h-11 w-11"
-            >
-              <DragHandleHorizontalIcon className="h-7 w-7" />
-            </Button>
+            > */}
+            <DragHandleHorizontalIcon className="h-7 w-7" />
+            {/* </Button> */}
           </SheetTrigger>
           <SheetContent
             side="left"

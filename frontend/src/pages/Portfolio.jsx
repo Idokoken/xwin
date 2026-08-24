@@ -11,19 +11,20 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Bitcoin from "../assets//Bitcoin-Logo.png";
 
-function AssetTable() {
+function Portfolio() {
   return (
-    <div>
+    <div className="p-5 lg:p-20">
+      <h1 className="text-bold text-3xl pb-5">Portfolio</h1>
       <Table>
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Coin</TableHead>
-            <TableHead>SYMBOL</TableHead>
-            <TableHead>VOLUME</TableHead>
-            <TableHead>MARKET CAP</TableHead>
-            <TableHead>24h</TableHead>
-            <TableHead className="text-right">PRICE</TableHead>
+            <TableHead className="w-[100px]">Asset</TableHead>
+            <TableHead>PRICE</TableHead>
+            <TableHead>UNIT</TableHead>
+            <TableHead>CHANGE</TableHead>
+            <TableHead>Change%</TableHead>
+            <TableHead className="text-right">VOLUME</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -49,4 +50,4 @@ function AssetTable() {
   );
 }
 
-export default AssetTable;
+export default Portfolio;
