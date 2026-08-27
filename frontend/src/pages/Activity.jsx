@@ -14,6 +14,9 @@ import { Button } from "@/components/ui/button";
 import { BookmarkFilledIcon } from "@radix-ui/react-icons";
 
 function Activity() {
+  const handleRemoveToWatchlist = (val) => {
+    console.log(val);
+  };
   return (
     <div className="p-5 lg:p-20">
       <h1 className="text-bold text-3xl pb-5">Activity</h1>
@@ -31,7 +34,7 @@ function Activity() {
         </TableHeader>
         <TableBody>
           {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((item, index) => (
-            <TableRow>
+            <TableRow key={index}>
               <TableCell>
                 <p>2026/05/11</p>
                 <p className="text-gray-400">10:11:44</p>
@@ -54,7 +57,7 @@ function Activity() {
                   variant="ghost"
                   className="h-10 w-10"
                   size="icon"
-                  onClick={hamdleRemoveToWatchlist(item.id)}
+                  onClick={handleRemoveToWatchlist(item.id)}
                 >
                   <BookmarkFilledIcon className="w-6 h-6" />
                 </Button>

@@ -1,4 +1,17 @@
 import React from "react";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Bitcoin from "../assets//Bitcoin-Logo.png";
+import { Button } from "@/components/ui/button";
+import { BookmarkFilledIcon } from "@radix-ui/react-icons";
 
 function Watchlist() {
   const hamdleRemoveToWatchlist = (value) => {
