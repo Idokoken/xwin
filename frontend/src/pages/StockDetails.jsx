@@ -12,6 +12,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import TradingForm from "../others/TradingForm";
+import StockChart from "./StockChart";
 
 function StockDetails() {
   return (
@@ -59,6 +60,9 @@ function StockDetails() {
             </DialogContent>
           </Dialog>
         </div>
+      </div>
+      <div className="mt-20">
+        <StockChart />
       </div>
     </div>
   );

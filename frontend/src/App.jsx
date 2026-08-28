@@ -13,24 +13,30 @@ import StockDetails from "./pages/StockDetails";
 import Watchlist from "./pages/Watchlist";
 import NotFound from "./pages/NotFound";
 import SearchCoin from "./others/SearchCoin";
+import Auth from "./pages/auth/Auth";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/activity" element={<Activity />} />
-        <Route path="/wallet" element={<Wallet />} />
-        <Route path="/payment-details" element={<PaymentDetails />} />
-        <Route path="/withdrawal" element={<Withdrawal />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/market/:id" element={<StockDetails />} />
-        <Route path="/watchlist" element={<Watchlist />} />
-        <Route path="/search" element={<SearchCoin />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      {/* <Auth /> */}
+      {/* {false && ( */}
+      <div className="">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/activity" element={<Activity />} />
+          <Route path="/wallet" element={<Wallet />} />
+          <Route path="/payment-details" element={<PaymentDetails />} />
+          <Route path="/withdrawal" element={<Withdrawal />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/market/:id" element={<StockDetails />} />
+          <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/search" element={<SearchCoin />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+      {/* )} */}
     </>
   );
 }
