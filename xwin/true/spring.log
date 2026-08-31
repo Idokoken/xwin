@@ -1,20 +1,36 @@
-2026-08-17T02:21:57.633+01:00  INFO 19052 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : Starting XwinApplication using Java 25.0.1 with PID 19052 (C:\Users\USXER\Documents\projects\xwin-app\xwin\target\classes started by USXER in C:\Users\USXER\Documents\projects\xwin-app\xwin)
-2026-08-17T02:21:57.687+01:00  INFO 19052 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-08-17T02:21:58.548+01:00  INFO 19052 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-17T02:21:58.550+01:00  INFO 19052 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-17T02:22:05.384+01:00  INFO 19052 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-17T02:22:05.729+01:00  INFO 19052 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 250 ms. Found 10 JPA repository interfaces.
-2026-08-17T02:22:15.401+01:00  INFO 19052 --- [xwin] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-08-17T02:22:15.493+01:00  INFO 19052 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-17T02:22:15.494+01:00  INFO 19052 --- [xwin] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-08-17T02:22:15.647+01:00  INFO 19052 --- [xwin] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 17092 ms
-2026-08-17T02:22:17.176+01:00  INFO 19052 --- [xwin] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-17T02:22:17.942+01:00  INFO 19052 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-08-17T02:22:20.690+01:00  INFO 19052 --- [xwin] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-17T02:22:21.095+01:00  INFO 19052 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-17T02:22:28.297+01:00  INFO 19052 --- [xwin] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70900495
-2026-08-17T02:22:28.300+01:00  INFO 19052 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-17T02:22:32.809+01:00  INFO 19052 --- [xwin] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-08-30T02:20:57.813+01:00  INFO 21520 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : Starting XwinApplication using Java 25.0.1 with PID 21520 (C:\Users\USXER\Documents\projects\xwin-app\xwin\target\classes started by USXER in C:\Users\USXER\Documents\projects\xwin-app\xwin)
+2026-08-30T02:20:57.869+01:00  INFO 21520 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-30T02:20:57.813+01:00  INFO 31200 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : Starting XwinApplication using Java 25.0.1 with PID 31200 (C:\Users\USXER\Documents\projects\xwin-app\xwin\target\classes started by USXER in C:\Users\USXER\Documents\projects\xwin-app\xwin)
+2026-08-30T02:20:57.874+01:00  INFO 31200 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-08-30T02:20:58.594+01:00  INFO 21520 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-30T02:20:58.594+01:00  INFO 21520 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-30T02:20:58.605+01:00  INFO 31200 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-30T02:20:58.605+01:00  INFO 31200 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-30T02:21:12.277+01:00  INFO 31200 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-30T02:21:12.277+01:00  INFO 21520 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-30T02:21:13.125+01:00  INFO 21520 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 747 ms. Found 10 JPA repository interfaces.
+2026-08-30T02:21:13.145+01:00  INFO 31200 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 774 ms. Found 10 JPA repository interfaces.
+2026-08-30T02:21:26.497+01:00  INFO 31200 --- [xwin] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-30T02:21:26.761+01:00  INFO 21520 --- [xwin] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-30T02:21:26.821+01:00  INFO 31200 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-30T02:21:26.821+01:00  INFO 21520 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-30T02:21:26.821+01:00  INFO 21520 --- [xwin] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-30T02:21:26.826+01:00  INFO 31200 --- [xwin] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-30T02:21:27.350+01:00  INFO 31200 --- [xwin] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 28745 ms
+2026-08-30T02:21:27.350+01:00  INFO 21520 --- [xwin] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 28756 ms
+2026-08-30T02:21:29.550+01:00  INFO 31200 --- [xwin] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-30T02:21:29.535+01:00  INFO 21520 --- [xwin] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-30T02:21:30.981+01:00  INFO 31200 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-30T02:21:30.981+01:00  INFO 21520 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-30T02:21:35.783+01:00  INFO 31200 --- [xwin] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-30T02:21:35.783+01:00  INFO 21520 --- [xwin] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-30T02:21:36.477+01:00  INFO 21520 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-30T02:21:36.477+01:00  INFO 31200 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-30T02:21:49.669+01:00  INFO 21520 --- [xwin] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b642e41
+2026-08-30T02:21:49.669+01:00  INFO 31200 --- [xwin] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@745a0a0a
+2026-08-30T02:21:49.669+01:00  INFO 21520 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-30T02:21:49.669+01:00  INFO 31200 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-30T02:21:54.720+01:00  INFO 21520 --- [xwin] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/xwin?createDatabaseIfNotExist=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -26,18 +42,38 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-08-17T02:22:37.708+01:00  INFO 19052 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-17T02:22:59.533+01:00  INFO 19052 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-17T02:23:00.080+01:00  INFO 19052 --- [xwin] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-17T02:23:01.576+01:00  WARN 19052 --- [xwin] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'coinController': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2026-08-17T02:23:01.577+01:00  INFO 19052 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-17T02:23:01.583+01:00  INFO 19052 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-17T02:23:01.647+01:00  INFO 19052 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-08-17T02:23:01.654+01:00  INFO 19052 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-08-17T02:23:01.818+01:00  INFO 19052 --- [xwin] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-08-30T02:21:54.720+01:00  INFO 31200 --- [xwin] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/xwin?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: xwin/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-30T02:22:06.137+01:00  INFO 21520 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-30T02:22:06.140+01:00  INFO 31200 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-30T02:22:10.141+01:00  INFO 31200 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-30T02:22:10.146+01:00  INFO 21520 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-30T02:22:10.923+01:00  INFO 31200 --- [xwin] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-30T02:22:10.923+01:00  INFO 21520 --- [xwin] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-30T02:22:14.979+01:00  WARN 21520 --- [xwin] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-30T02:22:14.997+01:00  WARN 31200 --- [xwin] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-30T02:22:17.090+01:00  INFO 21520 --- [xwin] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-30T02:22:17.090+01:00  INFO 31200 --- [xwin] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-30T02:22:39.536+01:00  WARN 31200 --- [xwin] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-08-30T02:22:39.651+01:00  INFO 31200 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-30T02:22:39.662+01:00  INFO 31200 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-30T02:22:40.101+01:00  INFO 31200 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-30T02:22:40.238+01:00  INFO 21520 --- [xwin] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-30T02:22:40.243+01:00  INFO 31200 --- [xwin] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-08-17T02:23:01.930+01:00 ERROR 19052 --- [xwin] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2026-08-30T02:22:40.268+01:00  INFO 21520 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : Started XwinApplication in 107.308 seconds (process running for 121.243)
+2026-08-30T02:22:40.298+01:00 ERROR 31200 --- [xwin] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -45,251 +81,14 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field objectMapper in com.ndgroups.xwin.controller.CoinController required a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
+Web server failed to start. Port 8080 was already in use.
 
 Action:
 
-Consider defining a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' in your configuration.
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
 
-2026-08-17T02:31:19.342+01:00  INFO 2264 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : Starting XwinApplication using Java 25.0.1 with PID 2264 (C:\Users\USXER\Documents\projects\xwin-app\xwin\target\classes started by USXER in C:\Users\USXER\Documents\projects\xwin-app\xwin)
-2026-08-17T02:31:19.348+01:00  INFO 2264 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-08-17T02:31:19.457+01:00  INFO 2264 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-17T02:31:19.458+01:00  INFO 2264 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-17T02:31:21.695+01:00  INFO 2264 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-17T02:31:21.861+01:00  INFO 2264 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 10 JPA repository interfaces.
-2026-08-17T02:31:23.136+01:00  INFO 2264 --- [xwin] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-08-17T02:31:23.169+01:00  INFO 2264 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-17T02:31:23.170+01:00  INFO 2264 --- [xwin] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-08-17T02:31:23.254+01:00  INFO 2264 --- [xwin] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3788 ms
-2026-08-17T02:31:23.620+01:00  INFO 2264 --- [xwin] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-17T02:31:23.688+01:00  INFO 2264 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-08-17T02:31:24.445+01:00  INFO 2264 --- [xwin] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-17T02:31:24.497+01:00  INFO 2264 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-17T02:31:25.037+01:00  INFO 2264 --- [xwin] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4829c778
-2026-08-17T02:31:25.040+01:00  INFO 2264 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-17T02:31:25.301+01:00  INFO 2264 --- [xwin] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/xwin?createDatabaseIfNotExist=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.44
-	Default catalog/schema: xwin/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-17T02:31:27.019+01:00  INFO 2264 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-17T02:31:27.725+01:00  INFO 2264 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-17T02:31:27.891+01:00  INFO 2264 --- [xwin] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-17T02:31:28.300+01:00  WARN 2264 --- [xwin] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'coinController' defined in file [C:\Users\USXER\Documents\projects\xwin-app\xwin\target\classes\com\ndgroups\xwin\controller\CoinController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-08-17T02:31:28.301+01:00  INFO 2264 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-17T02:31:28.306+01:00  INFO 2264 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-17T02:31:28.335+01:00  INFO 2264 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-08-17T02:31:28.339+01:00  INFO 2264 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-08-17T02:31:28.357+01:00  INFO 2264 --- [xwin] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-08-17T02:31:28.395+01:00 ERROR 2264 --- [xwin] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.ndgroups.xwin.controller.CoinController required a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' in your configuration.
-
-2026-08-17T03:16:19.552+01:00  INFO 15260 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : Starting XwinApplication using Java 25.0.1 with PID 15260 (C:\Users\USXER\Documents\projects\xwin-app\xwin\target\classes started by USXER in C:\Users\USXER\Documents\projects\xwin-app\xwin)
-2026-08-17T03:16:20.123+01:00  INFO 15260 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-08-17T03:16:20.825+01:00  INFO 15260 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-17T03:16:20.826+01:00  INFO 15260 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-17T03:16:23.002+01:00  INFO 18492 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : Starting XwinApplication using Java 25.0.1 with PID 18492 (C:\Users\USXER\Documents\projects\xwin-app\xwin\target\classes started by USXER in C:\Users\USXER\Documents\projects\xwin-app\xwin)
-2026-08-17T03:16:23.009+01:00  INFO 18492 --- [xwin] [restartedMain] com.ndgroups.xwin.XwinApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-08-17T03:16:23.188+01:00  INFO 18492 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-17T03:16:23.189+01:00  INFO 18492 --- [xwin] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-17T03:16:38.779+01:00  INFO 18492 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-17T03:16:38.780+01:00  INFO 15260 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-17T03:16:40.564+01:00  INFO 15260 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1027 ms. Found 10 JPA repository interfaces.
-2026-08-17T03:16:40.587+01:00  INFO 18492 --- [xwin] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1060 ms. Found 10 JPA repository interfaces.
-2026-08-17T03:16:58.287+01:00  INFO 15260 --- [xwin] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-08-17T03:16:58.287+01:00  INFO 18492 --- [xwin] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-08-17T03:16:58.816+01:00  INFO 18492 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-17T03:16:58.817+01:00  INFO 15260 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-17T03:16:58.821+01:00  INFO 18492 --- [xwin] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-08-17T03:16:58.824+01:00  INFO 15260 --- [xwin] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-08-17T03:16:59.291+01:00  INFO 18492 --- [xwin] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 36101 ms
-2026-08-17T03:16:59.291+01:00  INFO 15260 --- [xwin] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 38464 ms
-2026-08-17T03:17:02.939+01:00  INFO 18492 --- [xwin] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-17T03:17:02.950+01:00  INFO 15260 --- [xwin] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-17T03:17:04.862+01:00  INFO 18492 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-08-17T03:17:04.863+01:00  INFO 15260 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-08-17T03:17:09.248+01:00  INFO 18492 --- [xwin] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-17T03:17:09.248+01:00  INFO 15260 --- [xwin] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-17T03:17:09.805+01:00  INFO 18492 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-17T03:17:09.805+01:00  INFO 15260 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-08-17T03:17:17.825+01:00  INFO 15260 --- [xwin] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b642e41
-2026-08-17T03:17:17.838+01:00  INFO 15260 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-17T03:17:17.854+01:00  INFO 18492 --- [xwin] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29f5584
-2026-08-17T03:17:17.860+01:00  INFO 18492 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-08-17T03:17:21.466+01:00  INFO 18492 --- [xwin] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/xwin?createDatabaseIfNotExist=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.44
-	Default catalog/schema: xwin/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-17T03:17:21.467+01:00  INFO 15260 --- [xwin] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/xwin?createDatabaseIfNotExist=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.44
-	Default catalog/schema: xwin/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-17T03:17:58.513+01:00  INFO 15260 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-17T03:17:58.517+01:00  INFO 18492 --- [xwin] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-17T03:18:20.519+01:00  INFO 15260 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-17T03:18:20.519+01:00  INFO 18492 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-17T03:18:24.489+01:00  INFO 15260 --- [xwin] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-17T03:18:24.489+01:00  INFO 18492 --- [xwin] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-17T03:18:54.504+01:00  WARN 18492 --- [xwin] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-17T03:18:54.508+01:00  WARN 15260 --- [xwin] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-17T03:18:55.868+01:00  INFO 18492 --- [xwin] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-08-17T03:18:55.869+01:00  INFO 15260 --- [xwin] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-08-17T03:18:59.280+01:00  WARN 15260 --- [xwin] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'coinController' method 
-com.ndgroups.xwin.controller.CoinController#getCoinById(String)
-to {GET [//api/v1/coins/{coinId}]}: There is already 'coinController' bean method
-com.ndgroups.xwin.controller.CoinController#getCoinDetails(String) mapped.
-2026-08-17T03:18:59.291+01:00  INFO 15260 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-17T03:18:59.305+01:00  WARN 18492 --- [xwin] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'coinController' method 
-com.ndgroups.xwin.controller.CoinController#getCoinById(String)
-to {GET [//api/v1/coins/{coinId}]}: There is already 'coinController' bean method
-com.ndgroups.xwin.controller.CoinController#getCoinDetails(String) mapped.
-2026-08-17T03:18:59.313+01:00  INFO 18492 --- [xwin] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-17T03:18:59.324+01:00  INFO 18492 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-17T03:18:59.364+01:00  INFO 15260 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-08-17T03:18:59.406+01:00  INFO 15260 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-08-17T03:18:59.411+01:00  INFO 15260 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-08-17T03:18:59.467+01:00  INFO 18492 --- [xwin] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-08-17T03:18:59.477+01:00  INFO 18492 --- [xwin] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-08-17T03:18:59.919+01:00  INFO 18492 --- [xwin] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-08-17T03:18:59.925+01:00  INFO 15260 --- [xwin] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-08-17T03:18:59.968+01:00 ERROR 18492 --- [xwin] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'coinController' method 
-com.ndgroups.xwin.controller.CoinController#getCoinById(String)
-to {GET [//api/v1/coins/{coinId}]}: There is already 'coinController' bean method
-com.ndgroups.xwin.controller.CoinController#getCoinDetails(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.8.jar:7.0.8]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
-	at com.ndgroups.xwin.XwinApplication.main(XwinApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'coinController' method 
-com.ndgroups.xwin.controller.CoinController#getCoinById(String)
-to {GET [//api/v1/coins/{coinId}]}: There is already 'coinController' bean method
-com.ndgroups.xwin.controller.CoinController#getCoinDetails(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 21 common frames omitted
-
-2026-08-17T03:18:59.973+01:00 ERROR 15260 --- [xwin] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'coinController' method 
-com.ndgroups.xwin.controller.CoinController#getCoinById(String)
-to {GET [//api/v1/coins/{coinId}]}: There is already 'coinController' bean method
-com.ndgroups.xwin.controller.CoinController#getCoinDetails(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.8.jar:7.0.8]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
-	at com.ndgroups.xwin.XwinApplication.main(XwinApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'coinController' method 
-com.ndgroups.xwin.controller.CoinController#getCoinById(String)
-to {GET [//api/v1/coins/{coinId}]}: There is already 'coinController' bean method
-com.ndgroups.xwin.controller.CoinController#getCoinDetails(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158) ~[spring-webmvc-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.8.jar:7.0.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.8.jar:7.0.8]
-	... 21 common frames omitted
-
+2026-08-30T02:49:41.063+01:00  INFO 21520 --- [xwin] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-30T02:49:41.086+01:00  INFO 21520 --- [xwin] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-30T02:49:41.109+01:00  INFO 21520 --- [xwin] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-30T02:49:41.114+01:00  INFO 21520 --- [xwin] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-30T02:49:41.120+01:00  INFO 21520 --- [xwin] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Card,
   CardAction,
@@ -20,11 +20,16 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import AccountVerificationForm from "../others/AccountVerificationForm";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "@/context/AppContext";
 
 function Profile() {
   const enableTwoStepVerification = () => {
     console.log("two step evrification enabled");
   };
+
+  const navigate = useNavigate();
+  const { user } = useContext(AppContext);
 
   return (
     <div className="flex flex-col items mb-5">
@@ -38,12 +43,12 @@ function Profile() {
               <div className="space-y-7">
                 <div className="flex">
                   <p className="w-[9rem]">Email : </p>
-                  <p className="text-gray-500 ">ndgroups@gmail.com</p>
+                  <p className="text-gray-500 ">{user?.email}</p>
                 </div>
 
                 <div className="flex">
                   <p className="w-[9rem]">Full Name : </p>
-                  <p className="text-gray-500 ">nduka Bryan</p>
+                  <p className="text-gray-500 ">{user?.username}</p>
                 </div>
 
                 <div className="flex">

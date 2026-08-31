@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "@/components/ui/button";
 import { SheetClose } from "@/components/ui/sheet";
 import {
@@ -11,6 +11,7 @@ import {
 } from "@radix-ui/react-icons";
 import { CreditCardIcon, LandmarkIcon, WalletIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "@/context/AppContext";
 
 const menu = [
   { name: "Home", path: "/", icon: <HomeIcon className="h-6 w-6" /> },
@@ -48,6 +49,12 @@ const menu = [
   { name: "Logout", path: "/", icon: <ExitIcon className="h-6 w-6" /> },
 ];
 
+// const { logoutUser } = useContext(AppContext);
+const handleLogout = () => {
+  // logoutUser();
+  console.log("logout");
+};
+
 function Sidebar() {
   const navigate = useNavigate();
 
@@ -59,7 +66,12 @@ function Sidebar() {
             <Button
               variant="outline"
               className="flex items-center gap-5 py-6 w-full"
-              onClick={() => navigate(item.path)}
+              onClick={() => {
+                navigate(item.path);
+                if (item.name == "Logout") {
+                  handleLogout();
+                }
+              }}
             >
               <span className="w-8">{item.icon}</span>
               <p>{item.name}</p>

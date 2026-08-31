@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Navbar from "./pages/Navbar";
 import Home from "./pages/Home";
@@ -14,29 +14,39 @@ import Watchlist from "./pages/Watchlist";
 import NotFound from "./pages/NotFound";
 import SearchCoin from "./others/SearchCoin";
 import Auth from "./pages/auth/Auth";
+import { AppContext } from "./context/AppContext";
+import { BASE_URL, api } from "./config/API";
 
 function App() {
+  const { getUser, jwt, user } = useContext(AppContext);
+  const jwtFromStorage = localStorage.getItem("jwt");
+  useEffect(() => {
+    getUser(jwt || jwtFromStorage);
+    // console.log(jwt);
+  }, [jwt]);
+
   return (
     <>
-      {/* <Auth /> */}
-      {/* {false && ( */}
-      <div className="">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/activity" element={<Activity />} />
-          <Route path="/wallet" element={<Wallet />} />
-          <Route path="/payment-details" element={<PaymentDetails />} />
-          <Route path="/withdrawal" element={<Withdrawal />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/market/:id" element={<StockDetails />} />
-          <Route path="/watchlist" element={<Watchlist />} />
-          <Route path="/search" element={<SearchCoin />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
-      {/* )} */}
+      {user == null ? (
+        <div className="">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/activity" element={<Activity />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/payment-details" element={<PaymentDetails />} />
+            <Route path="/withdrawal" element={<Withdrawal />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/market/:id" element={<StockDetails />} />
+            <Route path="/watchlist" element={<Watchlist />} />
+            <Route path="/search" element={<SearchCoin />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      ) : (
+        <Auth />
+      )}
     </>
   );
 }

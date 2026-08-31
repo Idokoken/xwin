@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Sheet,
   SheetClose,
@@ -17,8 +17,12 @@ import {
 } from "@radix-ui/react-icons";
 import Profile from "../assets/profile.jpg";
 import Sidebar from "./Sidebar";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "@/context/AppContext";
 
 function Navbar() {
+  const navigate = useNavigate();
+  const { user } = useContext(AppContext);
   return (
     <div
       className="px-2 py-3 border-b z-50 bg-background bg-opacity-0 sticky top-0 left-0 right-0 flex 
@@ -66,7 +70,7 @@ function Navbar() {
       </div>
       <div className="">
         <Avatar>
-          <AvatarFallback>XT</AvatarFallback>
+          <AvatarFallback>{user?.username[0].toUpperCase()}</AvatarFallback>
         </Avatar>
       </div>
     </div>

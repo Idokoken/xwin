@@ -37,7 +37,7 @@ function Auth() {
             <section>
               <SignupForm />
               <div className="flex items-center justify-center">
-                <span>don't have an account ?</span>
+                <span>already have an account</span>
                 <Button variant="ghost" onClick={() => navigate("/signin")}>
                   Signin
                 </Button>
@@ -57,7 +57,7 @@ function Auth() {
             <section>
               <SigninForm />
               <div className="flex items-center justify-center">
-                <span>already have an account ?</span>
+                <span>don't have an account ?</span>
                 <Button variant="ghost" onClick={() => navigate("/signup")}>
                   Signup
                 </Button>
