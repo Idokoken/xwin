@@ -35,7 +35,7 @@ const CoinContextProvider = (props) => {
       const { data } = await axios.get(`${BASE_URL}/coins?page=${page}`);
 
       dispatch({ type: FETCH_COIN_LIST_SUCCESS, payload: data });
-      console.log("Coin list successfully fetched", data);
+      // console.log("Coin list successfully fetched", data.data);
     } catch (error) {
       dispatch({
         type: FETCH_COIN_LIST_FAILURE,
@@ -99,18 +99,50 @@ const CoinContextProvider = (props) => {
   };
 
   //   ---- Fetch Coin Details ----
-  const fetchCoinDetails = async ({ coinId, jwt }) => {
-    dispatch({ type: FETCH_MARKET_CHART_REQUEST });
-    try {
-      const { data } = await api.get(`/coins/${coinId}/chart`, {
-        headers: { Authorization: `Bearer ${jwt}` },
-      });
+  // const fetchCoinDetails = async ({ coinId, jwt }) => {
+  //   dispatch({ type: FETCH_COIN_DETAILS_REQUEST });
+  //   try {
+  //     const { data } = await api.get(`/coins/details/${coinId}`, {
+  //       headers: { Authorization: `Bearer ${jwt}` },
+  //     });
 
-      dispatch({ type: FETCH_MARKET_CHART_SUCCESS, payload: data });
-      console.log("Market Chart Successfully Fetched", data);
+  //     dispatch({ type: FETCH_COIN_DETAILS_SUCCESS, payload: data });
+  //     console.log("Coin Details Successfully Fetched", data.data);
+  //   } catch (error) {
+  //     dispatch({
+  //       type: FETCH_COIN_DETAILS_FAILURE,
+  //       payload: error.message,
+  //     });
+  //     console.log(error);
+  //   }
+  // };
+
+  const fetchCoinDetails = async (coinId) => {
+    dispatch({ type: FETCH_COIN_DETAILS_REQUEST });
+    try {
+      const { data } = await axios.get(`${BASE_URL}/coins/details/${coinId}`);
+
+      dispatch({ type: FETCH_COIN_DETAILS_SUCCESS, payload: data });
+      console.log("Coin Details Successfully Fetched", data.data);
     } catch (error) {
       dispatch({
-        type: FETCH_MARKET_CHART_FAILURE,
+        type: FETCH_COIN_DETAILS_FAILURE,
+        payload: error.message,
+      });
+      console.log(error);
+    }
+  };
+
+  //   ---- Search Coin ----
+  const searchCoin = async (search) => {
+    dispatch({ type: SEARCH_COIN_REQUEST });
+    try {
+      const { data } = await api.get(`/coins/search?q=${search}`);
+      dispatch({ type: SEARCH_COIN_SUCCESS, payload: data });
+      console.log("Coin Successfully Fetched", data);
+    } catch (error) {
+      dispatch({
+        type: SEARCH_COIN_FAILURE,
         payload: error.message,
       });
       console.log(error);
@@ -120,6 +152,11 @@ const CoinContextProvider = (props) => {
   const value = {
     ...state,
     getCoinList,
+    getTo50CoinsList,
+    fetchMarketChart,
+    getCoinById,
+    fetchCoinDetails,
+    searchCoin,
   };
 
   return (

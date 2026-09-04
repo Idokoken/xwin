@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/${api.prefix}/coins")
+@RequiredArgsConstructor
+@RequestMapping("/coins")
 public class CoinController {
     @Autowired
     private ICoinService coinService;
-
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
     @GetMapping
     public ResponseEntity<ApiResponseDto> getCoinList(@RequestParam("page") int page){
@@ -51,7 +51,7 @@ public class CoinController {
         }
     }
 
-    @GetMapping("/{coinId}")
+    @GetMapping("/details/{coinId}")
     public ResponseEntity<ApiResponseDto> getCoinDetails(@PathVariable String coinId){
         try {
             String coin = coinService.getCoinDetails(coinId);

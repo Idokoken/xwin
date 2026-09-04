@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Button } from "@/components/ui/button";
 import AssetTable from "./AssetTable";
 import StockChart from "./StockChart";
@@ -7,11 +7,31 @@ import Ethereum from "../assets/Ethereum-logo.png";
 import { Cross1Icon, DotIcon } from "@radix-ui/react-icons";
 import { MessageCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { CoinContext } from "@/context/coin/CoinContext";
+import axios from "axios";
+import { BASE_URL } from "@/config/API";
 
 function Home() {
   const [category, setCategory] = useState("all");
   const [inputValue, setInputValue] = useState("");
   const [isBotRelease, setIsBotRelease] = useState(false);
+
+  const { coinList, getCoinList } = useContext(CoinContext);
+
+  // const getData = async () => {
+  //   try {
+  //     const { data } = await axios.get(`${BASE_URL}/coins?page=1`);
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  useEffect(() => {
+    getCoinList(1);
+  }, []);
+
+  console.log(coinList);
 
   const handleCategory = (val) => {
     setCategory(val);
@@ -66,8 +86,9 @@ function Home() {
               Top Losers
             </Button>
           </div>
-          <AssetTable />
+          <AssetTable coin={coinList} category={category} />
         </div>
+
         <div className="hidden lg:block lg:w-[50%] p-5">
           <StockChart />
           <div className="flex gap-5 items-center">

@@ -70,7 +70,7 @@ function Navbar() {
       </div>
       <div className="">
         <Avatar>
-          <AvatarFallback>{user?.username[0].toUpperCase()}</AvatarFallback>
+          {/* <AvatarFallback>{user?.username[0].toUpperCase()}</AvatarFallback> */}
         </Avatar>
       </div>
     </div>
