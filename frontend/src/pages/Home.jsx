@@ -16,7 +16,8 @@ function Home() {
   const [inputValue, setInputValue] = useState("");
   const [isBotRelease, setIsBotRelease] = useState(false);
 
-  const { coinList, getCoinList } = useContext(CoinContext);
+  const { coinList, top50, getCoinList, getTo50CoinsList } =
+    useContext(CoinContext);
 
   // const getData = async () => {
   //   try {
@@ -26,6 +27,10 @@ function Home() {
   //     console.log(error);
   //   }
   // };
+
+  useEffect(() => {
+    getTo50CoinsList();
+  }, [category]);
 
   useEffect(() => {
     getCoinList(1);
@@ -86,11 +91,15 @@ function Home() {
               Top Losers
             </Button>
           </div>
-          <AssetTable coin={coinList} category={category} />
+          <AssetTable
+            coin={category == "All" ? coinList : top50}
+            category={category}
+          />
+          <div className="">pagination</div>
         </div>
 
         <div className="hidden lg:block lg:w-[50%] p-5">
-          <StockChart />
+          <StockChart coinId={"bitcoin"} />
           <div className="flex gap-5 items-center">
             <div className="">
               <Avatar className="">

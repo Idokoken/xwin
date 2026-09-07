@@ -35,7 +35,7 @@ public class CoinController {
         }
     }
 
-    @GetMapping("/chart/{coinId}")
+    @GetMapping("/{coinId}/chart")
     public ResponseEntity<ApiResponseDto> getMarketChat(@PathVariable String coinId,
                                                         @RequestParam("days")  int days){
         try {

@@ -23,19 +23,20 @@ function StockDetails() {
 
   const { fetchCoinDetails, coinDetails } = useContext(CoinContext);
 
-  const getData = async (coinId) => {
-    try {
-      const { data } = await axios.get(`${BASE_URL}/coins/details/${coinId}`);
-      console.log("Coin Details Successfully Fetched", data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // testing
+  // const getData = async (coinId) => {
+  //   try {
+  //     const { data } = await axios.get(`${BASE_URL}/coins/details/${coinId}`);
+  //     console.log("Coin Details Successfully Fetched", data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   useEffect(() => {
     // fetchCoinDetails({ coinId: id, jwt: localStorage.getItem("jwt") });
-    // fetchCoinDetails(id);
-    getData(id);
+    fetchCoinDetails(id);
+    // getData(id);
   }, [id]);
 
   return (
@@ -50,15 +51,20 @@ function StockDetails() {
           </div>
           <div className="">
             <div className="flex items-center gap-2">
-              <p>BTC</p>
+              <p>{coinDetails?.symbol.toUpperCase()}</p>
               <DotIcon className="text-gray-400" />
-              <p className="text-gray-400">Bitcoin</p>
+              <p className="text-gray-400">{coinDetails.name}</p>
             </div>
             <div className="flex items-end gap-2">
-              <p className="text-xl font-bold">$6554</p>
+              <p className="text-xl font-bold">
+                ${coinDetails?.market_data.current_price.usd}
+              </p>
               <p className="text-red-600">
-                <span>-1265343453.44</span>
-                <span>(0.346363)</span>
+                <span>-{coinDetails?.market_data.market_cap_change_24h}</span>
+                <span>
+                  (-{coinDetails?.market_data.market_cap_change_percentage_24h}
+                  %)
+                </span>
               </p>
             </div>
           </div>
@@ -85,7 +91,7 @@ function StockDetails() {
         </div>
       </div>
       <div className="mt-20">
-        <StockChart />
+        <StockChart coinId={id} />
       </div>
     </div>
   );
