@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -6,10 +6,13 @@ import { DotFilledIcon } from "@radix-ui/react-icons";
 import Razorpay from "../assets/razorpay_logo.png";
 import Stripe from "../assets/stripe_logo.png";
 import { Button } from "@/components/ui/button";
+import { WalletContext } from "@/context/wallet/WalletContext";
 
 function TopUpForm() {
   const [amount, setAmount] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("RAZORPAY");
+
+  const { paymentHandler } = useContext(WalletContext);
 
   const handleChange = (e) => {
     setAmount(e.target.value);
@@ -19,6 +22,7 @@ function TopUpForm() {
   };
   const handleSubmit = () => {
     console.log(amount, paymentMethod);
+    paymentHandler({ jwt: localStorage.getItem("jwt", amount, paymentMethod) });
   };
 
   return (

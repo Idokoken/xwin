@@ -12,13 +12,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Bitcoin from "../assets//Bitcoin-Logo.png";
 import { useNavigate } from "react-router-dom";
 import { CoinContext } from "@/context/coin/CoinContext";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 function AssetTable({ coin, category }) {
   const navigate = useNavigate();
   const { getCoinList } = useContext(CoinContext);
 
   return (
-    <div>
+    <>
       <Table>
         {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
         <ScrollArea className={`${category == "all" ? "h-[77h]" : "h-[82vh]"}`}>
@@ -57,7 +58,7 @@ function AssetTable({ coin, category }) {
           </TableBody>
         </ScrollArea>
       </Table>
-    </div>
+    </>
   );
 }
 

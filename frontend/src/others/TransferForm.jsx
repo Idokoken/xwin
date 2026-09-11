@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { DialogClose } from "@/components/ui/dialog";
+import { WalletContext } from "@/context/wallet/WalletContext";
 
 function TransferForm() {
   const [formData, setFormData] = useState({
@@ -10,10 +11,21 @@ function TransferForm() {
     purpose: "",
   });
 
+  const { transferMoney } = useContext(WalletContext);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleSubmit = () => {
+    const reqData = {
+      amount: formData.amount,
+      purpose: formData.purpose,
+    };
+    transferMoney({
+      jwt: localStorage.getItem("jwt"),
+      walletId: formData.walletId,
+      reqData,
+    });
     console.log(formData);
   };
 

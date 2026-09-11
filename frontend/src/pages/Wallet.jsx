@@ -1,3 +1,4 @@
+import React, { useContext, useEffect } from "react";
 import {
   CopyIcon,
   DollarSign,
@@ -5,7 +6,6 @@ import {
   UploadIcon,
   WalletIcon,
 } from "lucide-react";
-import React from "react";
 import {
   Card,
   CardAction,
@@ -28,8 +28,50 @@ import TopUpForm from "@/others/TopUpForm";
 import WithdrawalForm from "@/others/WithdrawalForm";
 import TransferForm from "@/others/TransferForm";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { WalletContext } from "@/context/wallet/WalletContext";
+import { useLocation, useNavigate } from "react-router-dom";
+
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 
 function Wallet() {
+  const {
+    userWallet,
+    transactions,
+    getUserWallet,
+    depositMoney,
+    getWalletTransactions,
+  } = useContext(WalletContext);
+  const query = useQuery();
+  const orderId = query.get("order_id");
+  const paymentId = query.get("payment_id");
+  const razorpaypaymentId = query.get("razorpay_payment_id");
+  const navigate = useNavigate();
+
+  const handleFetchUserWallet = () => {
+    getUserWallet(localStorage.getItem("jwt"));
+  };
+
+  const handleFetchWalletTransactions = () => {
+    getWalletTransactions({ jwt: localStorage.getItem("jwt") });
+  };
+
+  useEffect(() => {
+    handleFetchUserWallet();
+    handleFetchWalletTransactions();
+  }, []);
+  useEffect(() => {
+    if (orderId) {
+      depositMoney({
+        jwt: localStorage.getItem("jwt"),
+        orderId,
+        paymentId: razorpaypaymentId || paymentId,
+        navigate,
+      });
+    }
+  }, [orderId, paymentId, razorpaypaymentId]);
+
   return (
     <div className="flex flex-col items-center">
       <div className="pt-10 w-full lg:w-[60%]">
@@ -41,7 +83,7 @@ function Wallet() {
                 <div className="">
                   <CardTitle className="text-2xl">My Wallet</CardTitle>
                   <div className="flex items-center gap-2">
-                    <p className="text-gray-200 text-sm">#A475E</p>
+                    <p className="text-gray-200 text-sm">#{userWallet?.id}</p>
                     <CopyIcon
                       className="cursor-pointer hover:text-slate-300"
                       size={15}
@@ -50,14 +92,19 @@ function Wallet() {
                 </div>
               </div>
               <div className="">
-                <ReloadIcon className="w-6 h-6 cursor-pointer hover:text-gray-400" />
+                <ReloadIcon
+                  onClick={handleFetchUserWallet}
+                  className="w-6 h-6 cursor-pointer hover:text-gray-400"
+                />
               </div>
             </div>
           </CardHeader>
           <CardContent>
             <div className="flex items-center">
               <DollarSign />
-              <span className="text-2xl font-semibold">2000</span>
+              <span className="text-2xl font-semibold">
+                {userWallet.balance}
+              </span>
             </div>
             <div className="flex gap-7 mt-5">
               <Dialog>
@@ -123,7 +170,7 @@ function Wallet() {
             <UpdateIcon className="h-7 w-7 cursor-pointer hover:text-gray-400" />
           </div>
           <div className="space-y-5">
-            {[1, 1, 1, 1, 1, 1].map((item, index) => (
+            {transactions.map((item, index) => (
               <div className="" key={index}>
                 <Card className="px-5 flex flex-row justify-between items-center p-2">
                   <div className="flex items-center gap-5">
@@ -134,11 +181,11 @@ function Wallet() {
                     </Avatar>
                     <div className="space-y-1">
                       <h1>Buy Asset</h1>
-                      <p className="text-sm text-gray-500">2025-06-02</p>
+                      <p className="text-sm text-gray-500">{item.date}</p>
                     </div>
                   </div>
                   <div className="">
-                    <p className={`text-green-800`}>999 USD</p>
+                    <p className={`text-green-800`}>{item.amount} USD</p>
                   </div>
                 </Card>
               </div>

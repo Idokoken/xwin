@@ -10,6 +10,15 @@ import { Input } from "@/components/ui/input";
 import { CoinContext } from "@/context/coin/CoinContext";
 import axios from "axios";
 import { BASE_URL } from "@/config/API";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 function Home() {
   const [category, setCategory] = useState("all");
@@ -95,7 +104,32 @@ function Home() {
             coin={category == "All" ? coinList : top50}
             category={category}
           />
-          <div className="">pagination</div>
+          <div className="">
+            <Pagination>
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious href="#" />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="#">1</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="#" isActive>
+                    2
+                  </PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="#">3</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationEllipsis />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationNext href="#" />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          </div>
         </div>
 
         <div className="hidden lg:block lg:w-[50%] p-5">
