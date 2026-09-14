@@ -29,7 +29,7 @@ export const initialState = {
 };
 
 export const WithDrawalReducer = (state = initialState, action) => {
-  switch (Action.type) {
+  switch (action.type) {
     case WITHDRAWAL_REQUEST:
     case WITHDRAWAL_PROCEED_REQUEST:
     case GET_WITHDRAWAL_HISTORY_REQUEST:

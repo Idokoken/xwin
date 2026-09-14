@@ -17,11 +17,15 @@ import { useParams } from "react-router-dom";
 import { CoinContext } from "@/context/coin/CoinContext";
 import axios from "axios";
 import { BASE_URL } from "@/config/API";
+import { WatchlistContext } from "@/context/watchlist/WatchlistContext";
+import { existInWatchlist } from "@/utils/existInWatchlist";
 
 function StockDetails() {
   const { id } = useParams();
 
   const { fetchCoinDetails, coinDetails } = useContext(CoinContext);
+  const { items, getUserWatchlist, addItemToWatchlist } =
+    useContext(WatchlistContext);
 
   // testing
   // const getData = async (coinId) => {
@@ -37,7 +41,15 @@ function StockDetails() {
     // fetchCoinDetails({ coinId: id, jwt: localStorage.getItem("jwt") });
     fetchCoinDetails(id);
     // getData(id);
+    getUserWatchlist({ jwt: localStorage.getItem("jwt") });
   }, [id]);
+
+  const handleAddToWatchlist = () => {
+    addItemToWatchlist({
+      coinId: coinDetails.id,
+      jwt: localStorage.getItem("jwt"),
+    });
+  };
 
   return (
     <div className="p-5 mt-5">
@@ -70,13 +82,14 @@ function StockDetails() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <Button>
-            {true ? (
+          <Button onClick={handleAddToWatchlist}>
+            {existInWatchlist(items, coinDetails) ? (
               <BookmarkFilledIcon className="w-6 h-6" />
             ) : (
               <BookMarkedIcon className="w-6 h-6" />
             )}
           </Button>
+          {}
           <Dialog>
             <DialogTrigger>
               <Button size="lg">Tread</Button>

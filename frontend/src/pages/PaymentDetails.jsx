@@ -40,12 +40,15 @@ function PaymentDetails() {
           </CardHeader>
           <CardContent>
             <div className="flex items-center">
-              <p className="w-32">{paymentDetails?.accountHolderName}</p>
-              <p className="text-gray-400"> : ND Tech</p>
+              <p className="w-32">A/C Holder</p>
+              <p className="text-gray-400">
+                {" "}
+                : {paymentDetails?.accountHolderName}
+              </p>
             </div>
             <div className="flex items-center">
               <p className="w-32">IFSC</p>
-              <p className="text-gray-400"> : YESB000007</p>
+              <p className="text-gray-400"> : {paymentDetails?.bankName}</p>
             </div>
           </CardContent>
         </Card>

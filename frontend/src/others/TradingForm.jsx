@@ -1,12 +1,52 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { BookMarkedIcon, DotIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CoinContext } from "@/context/coin/CoinContext";
+import { WalletContext } from "@/context/wallet/WalletContext";
+import { AssetContext } from "@/context/asset/AssetContext";
+import { OrderContext } from "@/context/order/OrderContext";
 
 function TradingForm() {
   const [orderType, setOrderType] = useState("BUY");
-  const handleChange = () => {};
+  const [amount, setAmount] = useState(0);
+  const [quantity, setQuantity] = useState(0);
+
+  const { coinDetails } = useContext(CoinContext);
+  const { userWallet, getUserWallet } = useContext(WalletContext);
+  const { assertDetails, getAssetDetails } = useContext(AssetContext);
+  const { payOrder } = useContext(OrderContext);
+
+  const handleChange = (e) => {
+    const amount = e.target.value;
+    setAmount(amount);
+    const volume = calculateBuyCost(
+      amount,
+      coinDetails.market_data.current_price.usd,
+    );
+    setQuantity(volume);
+  };
+
+  const calculateBuyCost = (amount, price) => {
+    const volume = amount / price;
+    const decimalPlaces = Math.max(2, price.toString().split(".")[0].length);
+    return volume.toFixed(decimalPlaces);
+  };
+
+  const handleBuyCrypto = () => {
+    const orderData = { coinId: coinDetails?.id, quantity, orderType };
+    payOrder({ jwt: localStorage.getItem("jwt"), orderData, amount });
+  };
+
+  useEffect(() => {
+    getUserWallet(localStorage.getItem("jwt"));
+    getAssetDetails({
+      jwt: localStorage.getItem("jwt"),
+      coinId: coinDetails.id,
+    });
+  }, []);
+
   return (
     <div className="space-y-10 p-5">
       <div className="">
@@ -20,7 +60,7 @@ function TradingForm() {
           />
           <div className="">
             <p className="border text-2xl flex justify-center items-center w-36 h-14 rounded-md">
-              5463
+              {quantity}
             </p>
           </div>
         </div>
@@ -44,7 +84,9 @@ function TradingForm() {
             <p className="text-gray-400">Bitcoin</p>
           </div>
           <div className="flex items-end gap-2">
-            <p className="text-xl font-bold">$6554</p>
+            <p className="text-xl font-bold">
+              {coinDetails?.market_data.current_price.usd}
+            </p>
             <p className="text-red-600">
               <span>-1265343453.44</span>
               <span>(0.346363)</span>
@@ -58,10 +100,15 @@ function TradingForm() {
       </div>
       <div className="flex items-center justify-between">
         <p>{orderType == "BUY" ? "Available Cash" : "Available Quantity"}</p>
-        <p className="">{orderType == "BUY" ? 9000 : 23.0}</p>
+        <p>
+          {orderType == "BUY"
+            ? `$ ${userWallet?.balance}`
+            : assertDetails?.quantity || 0}
+        </p>
       </div>
       <div className="">
         <Button
+          onClick={handleBuyCrypto}
           className={`w-full py-6 ${orderType == "SELL" ? "bg-red-600 text-white" : ""}`}
         >
           {orderType}

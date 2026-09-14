@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import {
   Table,
   TableBody,
@@ -12,11 +12,27 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Bitcoin from "../assets//Bitcoin-Logo.png";
 import { Button } from "@/components/ui/button";
 import { BookmarkFilledIcon } from "@radix-ui/react-icons";
+import { WatchlistContext } from "@/context/watchlist/WatchlistContext";
+import { existInWatchlist } from "@/utils/existInWatchlist";
+import { CoinContext } from "@/context/coin/CoinContext";
 
 function Watchlist() {
+  const { items, getUserWatchlist } = useContext(WatchlistContext);
+  const { coinDetails } = useContext(CoinContext);
   const hamdleRemoveToWatchlist = (value) => {
     console.log(value);
   };
+
+  const handleAddToWatchlist = (item) => {
+    addItemToWatchlist({
+      coinId: item,
+      jwt: localStorage.getItem("jwt"),
+    });
+  };
+
+  useEffect(() => {
+    getUserWatchlist({ jwt: localStorage.getItem("jwt") });
+  }, []);
 
   return (
     <div className="p-5 lg:p-20">
@@ -34,20 +50,20 @@ function Watchlist() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((item, index) => (
+          {items.map((item, index) => (
             <TableRow key={index}>
               <TableCell className="font-medium flex items-center gap-2">
                 <Avatar className="-z-50">
-                  <AvatarImage src={Bitcoin} />
+                  <AvatarImage src={item.image} />
                   <AvatarFallback>BC</AvatarFallback>
                 </Avatar>
-                <span>Bitcoin</span>
+                <span>{item.name}</span>
               </TableCell>
-              <TableCell>BTC</TableCell>
-              <TableCell>7789888888</TableCell>
-              <TableCell>7789888888333</TableCell>
-              <TableCell>-0.789</TableCell>
-              <TableCell className="">$250.00</TableCell>
+              <TableCell>{item.symbol}</TableCell>
+              <TableCell>{item.total_volume}</TableCell>
+              <TableCell>{item.market_cap}</TableCell>
+              <TableCell>{item.price_change_percentage_24h}</TableCell>
+              <TableCell className="">$2{item.current_price}</TableCell>
               <TableCell className="text-right">
                 <Button
                   variant="ghost"

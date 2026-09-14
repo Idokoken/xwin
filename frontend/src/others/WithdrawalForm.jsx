@@ -1,14 +1,19 @@
+import React, { useState, useContext } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogClose } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import React, { useState } from "react";
+import { WithdrawalContext } from "@/context/withdrawal/WithdrawalContext";
 
 function WithdrawalForm() {
   const [amount, setAmount] = useState("");
+
+  const { paymentDetails, withdrawalRequest } = useContext(WithdrawalContext);
+
   const handleChange = (e) => {
     setAmount(e.target.value);
   };
   const handleSubmit = () => {
+    withdrawalRequest({ amount, jwt: localStorage.getItem("jwt") });
     console.log(amount);
   };
 
@@ -37,8 +42,8 @@ function WithdrawalForm() {
         </div>
         .{" "}
         <div className="">
-          <p className="text-xl font-bold">YES Bank</p>
-          <p className="text-xs">*********1651</p>
+          <p className="text-xl font-bold">{paymentDetails?.bankName}</p>
+          <p className="text-xs">{paymentDetails?.accountHolderName}</p>
         </div>
       </div>
       <DialogClose className="w-full">
