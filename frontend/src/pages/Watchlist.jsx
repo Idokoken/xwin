@@ -19,15 +19,13 @@ import { CoinContext } from "@/context/coin/CoinContext";
 function Watchlist() {
   const { items, getUserWatchlist } = useContext(WatchlistContext);
   const { coinDetails } = useContext(CoinContext);
-  const hamdleRemoveToWatchlist = (value) => {
-    console.log(value);
-  };
 
-  const handleAddToWatchlist = (item) => {
+  const hamdleRemoveToWatchlist = (value) => {
     addItemToWatchlist({
-      coinId: item,
+      coinId: value,
       jwt: localStorage.getItem("jwt"),
     });
+    console.log(value);
   };
 
   useEffect(() => {

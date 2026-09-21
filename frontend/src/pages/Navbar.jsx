@@ -60,7 +60,7 @@ function Navbar() {
             </SheetHeader>
           </SheetContent>
         </Sheet>
-        <p className="text-sm lg:text-base cursor-pointer">Xwin Trading</p>
+        <p className="text-sm lg:text-base cursor-pointer">Xwin</p>
         <div className="p-0 ml-9">
           <Button variant="outline className='flex items-center gap-3">
             <MagnifyingGlassIcon />

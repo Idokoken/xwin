@@ -117,10 +117,6 @@
   }
 }
 
-body {
-  margin: 0;
-}
-
 code,
 .counter {
   font-family: var(--mono);
@@ -292,4 +288,19 @@ code {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+:root {
+  --primary-color: rgba(16, 30, 186, 1);
+  --secondary-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
 }

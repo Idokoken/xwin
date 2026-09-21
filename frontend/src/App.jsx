@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Navbar from "./pages/Navbar";
-import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Portfolio from "./pages/Portfolio";
 import Activity from "./pages/Activity";
@@ -14,6 +13,7 @@ import Watchlist from "./pages/Watchlist";
 import NotFound from "./pages/NotFound";
 import SearchCoin from "./others/SearchCoin";
 import Auth from "./pages/auth/Auth";
+import Home from "./pages/Home";
 import { AppContext } from "./context/AppContext";
 import { BASE_URL, api } from "./config/API";
 
@@ -29,7 +29,7 @@ function App() {
     <>
       {user == null ? (
         <div className="">
-          <Navbar />
+          {/* <Navbar /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />

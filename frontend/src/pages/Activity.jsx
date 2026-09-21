@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import {
   Table,
   TableBody,
@@ -12,11 +12,22 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Bitcoin from "../assets//Bitcoin-Logo.png";
 import { Button } from "@/components/ui/button";
 import { BookmarkFilledIcon } from "@radix-ui/react-icons";
+import { OrderContext } from "@/context/order/OrderContext";
+import { calculateProfit } from "@/utils/calculateProfit";
 
 function Activity() {
+  const { orders, getAllOrdersForUsers } = useContext(OrderContext);
+
   const handleRemoveToWatchlist = (val) => {
     console.log(val);
   };
+
+  useEffect(() => {
+    getAllOrdersForUsers({
+      jwt: localStorage.getItem("jwt"),
+    });
+  }, []);
+
   return (
     <div className="p-5 lg:p-20">
       <h1 className="text-bold text-3xl pb-5">Activity</h1>
@@ -33,7 +44,7 @@ function Activity() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((item, index) => (
+          {orders.map((item, index) => (
             <TableRow key={index}>
               <TableCell>
                 <p>2026/05/11</p>
@@ -41,26 +52,29 @@ function Activity() {
               </TableCell>
               <TableCell className="font-medium flex items-center gap-2">
                 <Avatar className="-z-50">
-                  <AvatarImage src={Bitcoin} />
+                  <AvatarImage src={item.orderItem.coin.image} />
                   <AvatarFallback>BC</AvatarFallback>
                 </Avatar>
-                <span>Bitcoin</span>
+                <span>{item.orderItem.coin.name}</span>
               </TableCell>
               <TableCell>BTC</TableCell>
-              <TableCell className="">$250.00</TableCell>
-              <TableCell>7789888888</TableCell>
-              <TableCell>7789888888333</TableCell>
-              <TableCell>-0.789</TableCell>
-              <TableCell className="">$250.00</TableCell>
+              <TableCell className="">
+                ${item.orderItem.coin.buyPrice}
+              </TableCell>
+              <TableCell>{item.orderItem.coin.sellPrice}</TableCell>
+              <TableCell>{item.orderType}</TableCell>
+              <TableCell>${item.orderItem.coin.total_volume}</TableCell>
+              <TableCell>{calculateProfit(item)}</TableCell>
               <TableCell className="text-right">
-                <Button
+                {item.price}
+                {/* <Button
                   variant="ghost"
                   className="h-10 w-10"
                   size="icon"
                   onClick={handleRemoveToWatchlist(item.id)}
                 >
                   <BookmarkFilledIcon className="w-6 h-6" />
-                </Button>
+                </Button> */}
               </TableCell>
             </TableRow>
           ))}
