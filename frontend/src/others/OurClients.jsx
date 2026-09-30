@@ -11,6 +11,9 @@ import SliderModule from "react-slick";
 const Slider = SliderModule.default || SliderModule;
 
 const Wrapper = styled.div`
+  width: 100%;
+  overflow: hidden;
+
   .content {
     display: flex;
     flex-direction: column;
