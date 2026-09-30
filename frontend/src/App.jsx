@@ -16,6 +16,12 @@ import Auth from "./pages/auth/Auth";
 import Home from "./pages/Home";
 import { AppContext } from "./context/AppContext";
 import { BASE_URL, api } from "./config/API";
+import Faq from "./pages/Faq";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import HelpCenter from "./pages/HelpCenter";
+import TermAndCondition from "./pages/TermAndCondition";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   const { getUser, jwt, user } = useContext(AppContext);
@@ -41,6 +47,13 @@ function App() {
             <Route path="/market/:id" element={<StockDetails />} />
             <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/search" element={<SearchCoin />} />
+
+            <Route path="/about-us" element={<About />} />
+            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/help-center" element={<HelpCenter />} />
+            <Route path="/terms-conditions" element={<TermAndCondition />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

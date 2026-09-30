@@ -112,43 +112,46 @@ function Footer() {
         <div className="item">
           <h4>Company</h4>
           <div className="footerItem">
-            <Link to="/">About Us</Link>
+            <Link to="/about-us">About Us</Link>
           </div>
           <div className="footerItem">
             <Link to="/contact-us">Contact Us</Link>
           </div>
           <div className="footerItem">
-            <Link to="/about-us">FAQs</Link>
+            <Link to="/faq">FAQs</Link>
           </div>
           <div className="footerItem">
-            <Link to="/gallery">Security</Link>
+            <Link to="/security">Security</Link>
           </div>
         </div>
         <div className="item">
           <h4>Platfrom</h4>
           <div className="footerItem">
-            <Link to="/contact-us">Buy Crypto</Link>
+            <Link to="/portfolio">Buy Crypto</Link>
           </div>
           <div className="footerItem">
-            <Link to="/contact-us">Sell Crypto</Link>
+            <Link to="/portfolio">Sell Crypto</Link>
           </div>
           <div className="footerItem">
-            <Link to="/contact-us">Market</Link>
+            <Link to="/activity">Market</Link>
           </div>
           <div className="footerItem">
-            <Link to="/contact-us">Wallet</Link>
+            <Link to="/wallet">Wallet</Link>
           </div>
         </div>
         <div className="item">
           <h4>Resources</h4>
           <div className="footerItem">
-            <Link to="/terms-and-conditions">Terms of Service</Link>
+            <Link to="/terms-conditions">Terms of Service</Link>
           </div>
           <div className="footerItem">
             <Link to="/privacy-policy">Privacy Policy</Link>
           </div>
           <div className="footerItem">
-            <Link to="/contact-us">Portfolio</Link>
+            <Link to="/portfolio">Portfolio</Link>
+          </div>
+          <div className="footerItem">
+            <Link to="/help-center">Help Center</Link>
           </div>
         </div>
 

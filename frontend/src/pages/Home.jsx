@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { tablet } from "@/Responsive";
 import OurOffer from "@/others/OurOffer";
 import Hero4 from "../assets/hero4.jpg";
+import OurClients from "@/others/OurClients";
 
 const Wrapper = styled.div`
   .invest h1 {
@@ -28,8 +29,7 @@ const Wrapper = styled.div`
     padding: 10px;
   }
   .discovery .content {
-    background: url("../assets/hero4.jpg");
-    background: red;
+    background: url("/images/hero3.jpg");
     display: grid;
     grid-template-columns: 70% 20%;
     gap: 20px;
@@ -45,6 +45,51 @@ const Wrapper = styled.div`
     font-weight: bold;
     font-size: 20px;
   }
+
+  .global {
+    display: grid;
+    grid-template-columns: 25% 40% 25%;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .global .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    ${tablet({ gap: "10px" })}
+  }
+  .global .content a {
+    background: linear-gradient(90deg, #101eba 54.91%, #06070a 100%);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    ${tablet({ fontSize: "20px", padding: "12px 25px" })}
+  }
+  .global h1 {
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    line-spacing: 1;
+    ${tablet({ fontSize: "35px" })}
+  }
+  .global p {
+    width: 100%;
+    font-size: 12px;
+    ${tablet({ fontSize: "18px" })}
+  }
+
+  .global .one,
+  .global .three {
+    background: url("/images/bg2.png");
+    background-size: contain;
+    border-radius: 20px;
+  }
 `;
 
 function Home() {
@@ -53,6 +98,7 @@ function Home() {
       <section className="hero">
         <Hero />
       </section>
+
       <section className="invest flex flex-col items-center my-10 mx-5">
         <h1 className="text-xl m-4 text-center md:w-3/5">
           Buy, Sell, Grow, and Manage your digital assets with Ease
@@ -66,8 +112,28 @@ function Home() {
           Invest Now
         </Link>
       </section>
+
       <section className="offer">
         <OurOffer />
+      </section>
+
+      <section className="global my-10 mx-5">
+        <div className="one w-full h-full"></div>
+
+        <div className="content two w-full">
+          <h1 className="text-xl m-4 text-center md:w-3/5 w-full">
+            A Financial Experience Without Borders
+          </h1>
+          <p className="lg:w-2/5 md:w-3/5 text-center w-full">
+            Connect to Global Markets and Manage your Money from one Powerful
+            Platform
+          </p>
+          <Link to="" className="my-2 lg:my-8">
+            Go Beyond Borders
+          </Link>
+        </div>
+
+        <div className="three w-full h-full"></div>
       </section>
 
       <section className="discovery my-20 p-10">
@@ -86,6 +152,10 @@ function Home() {
           </div>
           <div className=""></div>
         </div>
+      </section>
+
+      <section className="ourclients my-10">
+        <OurClients />
       </section>
 
       <Footer />
