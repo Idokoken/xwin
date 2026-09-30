@@ -10,7 +10,7 @@ import {
   GET_USER_SUCCESS,
   GET_USER_FAILURE,
   LOGOUT,
-} from "./action";
+} from "./Action";
 import { Data } from "../config/data";
 import axios from "axios";
 import { api, BASE_URL } from "../config/API";

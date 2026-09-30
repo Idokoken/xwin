@@ -28,6 +28,14 @@ const Wrapper = styled.div`
     object-fit: cover;
     border-radius: 50%;
   }
+  h1 {
+    max-width: 650px;
+    font-size: 35px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
   h2 {
     max-width: 650px;
     font-size: 35px;
@@ -35,7 +43,9 @@ const Wrapper = styled.div`
     margin-bottom: 20px;
     font-weight: 700;
   }
-  p {
+  .desc {
+  }
+  .content p {
     max-width: 550px;
     font-size: 20px;
     line-height: 1.6;
@@ -43,8 +53,9 @@ const Wrapper = styled.div`
     text-align: center;
     font-style: italic;
   }
+
   .star {
-    color: yellow;
+    color: #e6cb36;
   }
 `;
 
@@ -52,11 +63,12 @@ function OurClients() {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
+    arrows: true,
   };
 
   const slides = [
@@ -91,6 +103,14 @@ function OurClients() {
   return (
     <Wrapper>
       <section className="">
+        <div className="head flex flex-col justify-center items-center">
+          <h1 className="">What Our Clients Think</h1>
+          <p className="desc text-center mb-5 mx-5">
+            Hear from the companies we work with. Discover how our flexible
+            corporate rental solutions help them simplify relocations, support
+            staff, and secure reliable short- and long-term housing with ease
+          </p>
+        </div>
         <Slider {...settings}>
           {slides.map((slide) => (
             <div key={slide.id} className="">
@@ -98,14 +118,14 @@ function OurClients() {
                 <div className="img-container">
                   <img src={slide.image} alt="client" />
                 </div>
-                <div className="stars">
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
+                <div className="stars my-4">
+                  <StarIcon className="star" />
+                  <StarIcon className="star" />
+                  <StarIcon className="star" />
+                  <StarIcon className="star" />
+                  <StarIcon className="star" />
                 </div>
-                <p>{slide.message}</p>
+                <p className="mx-5">{slide.message}</p>
                 <h2>{slide.name}</h2>
                 <h3>{slide.profession}</h3>
               </div>
