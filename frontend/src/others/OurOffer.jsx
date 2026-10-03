@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { tablet } from "../Responsive";
 import styled from "styled-components";
+import SecurityIcon from "@mui/icons-material/Security";
+import ManageHistoryIcon from "@mui/icons-material/ManageHistory";
+import ReceiptIcon from "@mui/icons-material/Receipt";
+import AddBusinessIcon from "@mui/icons-material/AddBusiness";
+import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 const Wrapper = styled.div`
   background: rgba(42, 41, 50, 1);
@@ -10,12 +16,13 @@ const Wrapper = styled.div`
   .offers {
     display: grid;
     grid-template-columns: 45% 45%;
-    gap: 50px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
     background: rgba(42, 41, 50, 1);
     margin: 10px 0 50px 0;
     overflow: hidden;
+    ${tablet({ gap: "50px" })}
   }
   .offer {
     background: rgba(42, 41, 50, 1);
@@ -59,7 +66,12 @@ const Wrapper = styled.div`
     background: var(--primary-color);
     padding: 20px;
     border-radius: 50%;
-    align-self: center;
+    width: 60px;
+    height: 60px;
+  }
+  p {
+    font-size: 14px;
+    ${tablet({ fontSize: "18px" })}
   }
 `;
 
@@ -92,90 +104,78 @@ function OurOffer() {
         <div className="offer">
           <div className="icon-container">
             <span className="my-20">
-              <i className="fa-brands fa-tiktok"></i>
+              <SecurityIcon />
             </span>
           </div>
           <h3 className="my-5">Enhanced Security</h3>
           <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Praesentium deserunt illo laborum repellendus facere id laudantium
-            explicabo est excepturi, eius amet quas non commodi ut
-            exercitationem ducimus repudiandae, inventore deleniti?
+            Advanced security measures help protect your account, personal
+            information, and digital assets.
           </p>
         </div>
 
         <div className="offer">
           <div className="icon-container">
             <span className="my-20">
-              <i className="fa-brands fa-tiktok"></i>
+              <ManageHistoryIcon />
             </span>
           </div>
-          <h3 className="my-5">Enhanced Security</h3>
+          <h3 className="my-5">Easy Portfolio Management</h3>
           <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Praesentium deserunt illo laborum repellendus facere id laudantium
-            explicabo est excepturi, eius amet quas non commodi ut
-            exercitationem ducimus repudiandae, inventore deleniti?
+            Track and manage your investments conveniently from one simple
+            dashboard.
           </p>
         </div>
 
         <div className="offer">
           <div className="icon-container">
             <span className="my-20">
-              <i className="fa-brands fa-tiktok"></i>
+              <ReceiptIcon />
             </span>
           </div>
-          <h3 className="my-5">Enhanced Security</h3>
+          <h3 className="my-5">Fast & Reliable Transactions</h3>
           <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Praesentium deserunt illo laborum repellendus facere id laudantium
-            explicabo est excepturi, eius amet quas non commodi ut
-            exercitationem ducimus repudiandae, inventore deleniti?
+            Enjoy a smooth and convenient process for deposits, investments, and
+            withdrawals.
           </p>
         </div>
 
         <div className="offer">
           <div className="icon-container">
             <span className="my-20">
-              <i className="fa-brands fa-tiktok"></i>
+              <AddBusinessIcon />
             </span>
           </div>
-          <h3 className="my-5">Enhanced Security</h3>
+          <h3 className="my-5">Real-Time Market Insights</h3>
           <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Praesentium deserunt illo laborum repellendus facere id laudantium
-            explicabo est excepturi, eius amet quas non commodi ut
-            exercitationem ducimus repudiandae, inventore deleniti?
+            Access up-to-date cryptocurrency prices, market trends, and relevant
+            market information.
           </p>
         </div>
 
         <div className="offer">
           <div className="icon-container">
             <span className="my-20">
-              <i className="fa-brands fa-tiktok"></i>
+              <DynamicFeedIcon />
             </span>
           </div>
-          <h3 className="my-5">Enhanced Security</h3>
+          <h3 className="my-5">Multiple Investment Options</h3>
           <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Praesentium deserunt illo laborum repellendus facere id laudantium
-            explicabo est excepturi, eius amet quas non commodi ut
-            exercitationem ducimus repudiandae, inventore deleniti?
+            Explore a range of cryptocurrency and investment opportunities based
+            on your goals.
           </p>
         </div>
 
         <div className="offer">
           <div className="icon-container">
             <span className="my-20">
-              <i className="fa-brands fa-tiktok"></i>
+              <SupportAgentIcon />
             </span>
           </div>
-          <h3 className="my-5">Enhanced Security</h3>
+          <h3 className="my-5">24/7 Customer Support</h3>
           <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Praesentium deserunt illo laborum repellendus facere id laudantium
-            explicabo est excepturi, eius amet quas non commodi ut
-            exercitationem ducimus repudiandae, inventore deleniti?
+            Get assistance whenever you need help with your account or
+            platform-related questions
           </p>
         </div>
       </div>
