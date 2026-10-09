@@ -23,6 +23,8 @@ import TermAndCondition from "./pages/TermAndCondition";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./others/Footer";
+import Header from "./others/Header";
+import Services from "./pages/Services";
 
 function App() {
   const { getUser, jwt, user } = useContext(AppContext);
@@ -36,6 +38,7 @@ function App() {
     <>
       {user == null ? (
         <div className="">
+          <Header />
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -52,6 +55,7 @@ function App() {
             <Route path="/about-us" element={<About />} />
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/help-center" element={<HelpCenter />} />
             <Route path="/terms-conditions" element={<TermAndCondition />} />

@@ -138,6 +138,9 @@ function Footer() {
           <div className="footerItem">
             <Link to="/wallet">Wallet</Link>
           </div>
+          <div className="footerItem">
+            <Link to="/services">Services</Link>
+          </div>
         </div>
         <div className="item">
           <h4>Resources</h4>

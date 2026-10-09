@@ -157,8 +157,6 @@ function Home() {
       <section className="ourclients my-10">
         <OurClients />
       </section>
-
-      <Footer />
     </Wrapper>
   );
 }
