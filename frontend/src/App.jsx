@@ -36,7 +36,7 @@ function App() {
 
   return (
     <>
-      {user == null ? (
+      {/* {user == null ? ( */}
         <div className="">
           <Header />
           <Navbar />
@@ -63,9 +63,10 @@ function App() {
           </Routes>
           <Footer />
         </div>
-      ) : (
-        <Auth />
-      )}
+      // ) 
+      // : (
+      //   <Auth />
+      // )}
     </>
   );
 }
