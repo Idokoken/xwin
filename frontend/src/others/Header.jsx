@@ -34,12 +34,12 @@ function Header() {
       <nav className="w-full bg-white shadow-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
           {/* Logo */}
-          <div className="text-xl font-bold flex items-center">
+          <Link to="/" className="text-xl font-bold flex items-center">
             <div className="img-container">
               <img src={brand} alt="brand" />
             </div>
             <span>Xwin</span>
-          </div>
+          </Link>
 
           {/* Desktop Navbar */}
           <div className="hidden md:flex items-center gap-8">

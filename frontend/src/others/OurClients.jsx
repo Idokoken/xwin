@@ -1,9 +1,9 @@
 import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.jpg";
+import user1 from "../assets/user1.png";
+import user2 from "../assets/user2.png";
+import user3 from "../assets/user3.jpg";
 import styled from "styled-components";
 import StarIcon from "@mui/icons-material/Star";
 
@@ -77,29 +77,27 @@ function OurClients() {
   const slides = [
     {
       id: 1,
-      image: hero1,
+      image: user1,
       name: "Carlos slim",
       message:
-        "From established global brands to emerging companies, explore a wide range of stocks, stay informed" +
-        "on market movements, and build a portfolio that matches your goals",
+        "Xwin helps me track my investments and make informed decisions as I work toward growing my wealth",
       profession: "Investment Banker",
     },
     {
       id: 2,
-      image: hero2,
-      name: "Tim Haword Kin",
+      image: user2,
+      name: "Justina Peace",
       message:
-        "Make your money more than something you save—use it to explore investment opportunities across stocks" +
-        ", crypto, and more",
-      profession: "Machanical Engineer",
+        "Xwin makes managing my digital investments easier and helps me stay focused on my financial goals",
+      profession: "Accountant",
     },
     {
       id: 3,
-      image: hero3,
-      name: "Amarach Pepertua",
+      image: user3,
+      name: "Hope Timi",
       message:
-        "Explore thousands of investment opportunities and find assets that align with your financial goals",
-      profession: "",
+        "Xwin helps me monitor my portfolio and work toward building long-term wealth",
+      profession: "Software Engineer",
     },
   ];
 

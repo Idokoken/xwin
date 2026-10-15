@@ -5,6 +5,7 @@ import hero1 from "../assets/hero1.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 import SliderModule from "react-slick";
 const Slider = SliderModule.default || SliderModule;
@@ -113,15 +114,17 @@ function Hero() {
     autoplaySpeed: 2000,
   };
 
+  const navigate = useNavigate();
+
   const slides = [
     {
       id: 1,
       image: hero1,
       title: "5,000+ Stocks. Endless Possibilities",
       description:
-        "From established global brands to emerging companies, explore a wide range of stocks, stay informed" +
-        "on market movements, and build a portfolio that matches your goals",
+        "Explore stocks from global brands to emerging companies and track market trends aligned with your goals",
       button: "Explore Investment",
+      link: "/services",
     },
     {
       id: 2,
@@ -131,6 +134,7 @@ function Hero() {
         "Make your money more than something you save—use it to explore investment opportunities across stocks" +
         ", crypto, and more",
       button: "Get Started",
+      link: "/activity",
     },
     {
       id: 3,
@@ -139,6 +143,7 @@ function Hero() {
       description:
         "Explore thousands of investment opportunities and find assets that align with your financial goals",
       button: "Discover More",
+      link: "/services",
     },
   ];
 
@@ -163,7 +168,12 @@ function Hero() {
 
                   <p>{slide.description}</p>
 
-                  <button className="hero-button">{slide.button}</button>
+                  <button
+                    className="hero-button"
+                    onClick={() => navigate(`${slide.link}`)}
+                  >
+                    {slide.button}
+                  </button>
                 </div>
               </div>
             </div>

@@ -7,6 +7,7 @@ import { tablet } from "@/Responsive";
 import OurOffer from "@/others/OurOffer";
 import Hero4 from "../assets/hero4.jpg";
 import OurClients from "@/others/OurClients";
+import AssetTable from "./AssetTable";
 
 const Wrapper = styled.div`
   .invest h1 {
@@ -108,7 +109,7 @@ function Home() {
           at your fingertips. Find your favourite crypto, explore new
           opportunities, and build your portfolio—all from one app.
         </p>
-        <Link to="" className="my-8">
+        <Link to="/payment-details" className="my-8">
           Invest Now
         </Link>
       </section>
@@ -128,13 +129,17 @@ function Home() {
             Connect to Global Markets and Manage your Money from one Powerful
             Platform
           </p>
-          <Link to="" className="my-2 lg:my-8">
+          <Link to="/portfolio" className="my-2 lg:my-8">
             Go Beyond Borders
           </Link>
         </div>
 
         <div className="three w-full h-full"></div>
       </section>
+
+      {/* <section className="">
+        <AssetTable />
+      </section> */}
 
       <section className="discovery my-20 p-10">
         <div className="content">
@@ -146,7 +151,7 @@ function Home() {
               Discover what your Money is capable of: Invest, grow, earn and
               move Money
             </p>
-            <Link to="" className="my-10">
+            <Link to="/wallet" className="my-10">
               Start Now
             </Link>
           </div>

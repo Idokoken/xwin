@@ -157,7 +157,7 @@ const Wrapper = styled.div`
     margin-bottom: 25px;
     border-radius: 12px;
     background: #eff6ff;
-    color: #2563eb;
+    color: var(--primary-color);
     font-size: 25px;
     font-weight: bold;
   }
@@ -173,7 +173,7 @@ const Wrapper = styled.div`
   }
 
   .service-card a {
-    color: #2563eb;
+    color: var(--primary-color);
     font-weight: 600;
   }
 
@@ -380,27 +380,6 @@ const Wrapper = styled.div`
   }
 
   /* =========================
-   RISK DISCLAIMER
-========================= */
-
-  .risk-section {
-    padding: 35px 20px;
-    background: #f3f4f6;
-    text-align: center;
-  }
-
-  .risk-section h3 {
-    margin-bottom: 10px;
-  }
-
-  .risk-section p {
-    max-width: 950px;
-    margin: auto;
-    color: #6b7280;
-    font-size: 13px;
-  }
-
-  /* =========================
    RESPONSIVE
 ========================= */
 
@@ -493,7 +472,7 @@ function Services() {
           </p>
 
           <div className="hero-buttons">
-            <Link to="/register" className="btn btn-primary">
+            <Link to="/portfolio" className="btn btn-primary">
               Get Started
             </Link>
             <Link to="/contact-us" className="btn btn-secondary">
@@ -530,7 +509,7 @@ function Services() {
               digital assets through a convenient online platform.
             </p>
 
-            <Link to="/investments">Learn More →</Link>
+            <Link to="/about-us">Learn More →</Link>
           </div>
 
           <div className="service-card">
@@ -543,7 +522,7 @@ function Services() {
               from a single, easy-to-use dashboard.
             </p>
 
-            <a to="/portfolio">Learn More →</a>
+            <Link to="/portfolio">Learn More →</Link>
           </div>
 
           <div className="service-card">
@@ -556,7 +535,7 @@ function Services() {
               stay informed about your digital assets.
             </p>
 
-            <a to="/portfolio">Learn More →</a>
+            <Link to="/portfolio">Learn More →</Link>
           </div>
 
           <div className="service-card">
@@ -569,7 +548,7 @@ function Services() {
               you better understand digital asset markets.
             </p>
 
-            <a to="/market">Explore Insights →</a>
+            <Link to="/faq">Explore Insights →</Link>
           </div>
 
           <div className="service-card">
@@ -582,7 +561,7 @@ function Services() {
               straightforward transaction options available on the platform.
             </p>
 
-            <Link to="/account">Learn More →</Link>
+            <Link to="/wallet">Learn More →</Link>
           </div>
 
           <div className="service-card">
@@ -595,7 +574,7 @@ function Services() {
               and responsible investment practices.
             </p>
 
-            <Link href="/learn">Start Learning →</Link>
+            <Link to="/faq">Start Learning →</Link>
           </div>
         </div>
       </section>
@@ -755,11 +734,11 @@ function Services() {
           </p>
 
           <div className="hero-buttons">
-            <Link href="/register" class="btn btn-primary">
+            <Link to="/signup" className="btn btn-primary">
               Create Account
             </Link>
 
-            <Link href="/contact" class="btn btn-secondary">
+            <Link to="/contact-us" className="btn btn-secondary">
               Talk to Us
             </Link>
           </div>

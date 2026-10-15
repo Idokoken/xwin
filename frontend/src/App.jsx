@@ -25,6 +25,7 @@ import Contact from "./pages/Contact";
 import Footer from "./others/Footer";
 import Header from "./others/Header";
 import Services from "./pages/Services";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   const { getUser, jwt, user } = useContext(AppContext);
@@ -40,27 +41,32 @@ function App() {
       <div className="">
         <Header />
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/activity" element={<Activity />} />
-          <Route path="/wallet" element={<Wallet />} />
-          <Route path="/payment-details" element={<PaymentDetails />} />
-          <Route path="/withdrawal" element={<Withdrawal />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/market/:id" element={<StockDetails />} />
-          <Route path="/watchlist" element={<Watchlist />} />
-          <Route path="/search" element={<SearchCoin />} />
+        <ScrollToTop>
+          {" "}
+          {/* Add ScrollToTop to listen for route changes */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/activity" element={<Activity />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/payment-details" element={<PaymentDetails />} />
+            <Route path="/withdrawal" element={<Withdrawal />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/market/:id" element={<StockDetails />} />
+            <Route path="/watchlist" element={<Watchlist />} />
+            <Route path="/search" element={<SearchCoin />} />
 
-          <Route path="/about-us" element={<About />} />
-          <Route path="/contact-us" element={<Contact />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/help-center" element={<HelpCenter />} />
-          <Route path="/terms-conditions" element={<TermAndCondition />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            <Route path="/about-us" element={<About />} />
+            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/help-center" element={<HelpCenter />} />
+            <Route path="/terms-conditions" element={<TermAndCondition />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </ScrollToTop>
+
         <Footer />
       </div>
       )

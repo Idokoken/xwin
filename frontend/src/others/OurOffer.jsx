@@ -56,6 +56,12 @@ const Wrapper = styled.div`
   .offer:nth-child(4) {
     transition-delay: 0.9s;
   }
+  .offer:nth-child(5) {
+    transition-delay: 1.2s;
+  }
+  .offer:nth-child(6) {
+    transition-delay: 1.5s;
+  }
 
   .icon-container {
     margin: 20px 0;
